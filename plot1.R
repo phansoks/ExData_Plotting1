@@ -1,5 +1,5 @@
 #load data 
-data <- read.table("data/household_power_consumption.txt", sep=";", header=TRUE)
+data <- read.table("household_power_consumption.txt", sep=";", header=TRUE)
 
 #convert Date and Time varibles to Date and Time classes
 data$Date <- as.Date(data$Date, "%d/%m/%Y")
