@@ -1,3 +1,7 @@
+#Change language settings
+Sys.setenv("LANGUAGE"="EN")
+Sys.setlocale("LC_TIME", "English")
+
 #load data 
 data <- read.table("household_power_consumption.txt", sep=";", header=TRUE)
 
