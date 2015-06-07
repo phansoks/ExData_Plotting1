@@ -15,7 +15,7 @@ data <- data[data$Date=="2007-02-01" | data$Date=="2007-02-02",]
 #draw plot 4
 y <- strptime(paste(data$Date, data$Time), format = "%Y-%m-%d %H:%M:%S")
 
-png(file = "plot4.png")
+png(file = "plot4.png", bg="transparent")
 par(mfcol = c(2, 2))
 #first plot (2)
 data$Global_active_power <- as.numeric(as.character((data$Global_active_power)))

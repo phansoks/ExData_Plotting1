@@ -16,9 +16,7 @@ data <- data[data$Date=="2007-02-01" | data$Date=="2007-02-02",]
 par(mfcol = c(1, 1))
 data$Global_active_power <- as.numeric(as.character((data$Global_active_power)))
 y <- strptime(paste(data$Date, data$Time), format = "%Y-%m-%d %H:%M:%S")
-#plot(y, data$Global_active_power, type="l", ylab = "Global Active Power (kilowatts)", xlab="", xaxt = "n")
-plot(y, data$Global_active_power, type="l", ylab = "Global Active Power (kilowatts)", xlab="")
-#axis(1, at=y, c("Thu", "Fri", "Sat"))
+plot(y, data$Global_active_power, type="l", ylab = "Global Active Power (kilowatts)", xlab="", bg="transparent")
 
 #save png file
 dev.copy(png, file = "plot2.png")
