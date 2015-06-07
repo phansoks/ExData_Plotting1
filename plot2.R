@@ -14,6 +14,7 @@ data <- data[data$Date=="2007-02-01" | data$Date=="2007-02-02",]
 
 #draw plot 2
 par(mfcol = c(1, 1))
+par(bg = "transparent")
 data$Global_active_power <- as.numeric(as.character((data$Global_active_power)))
 y <- strptime(paste(data$Date, data$Time), format = "%Y-%m-%d %H:%M:%S")
 plot(y, data$Global_active_power, type="l", ylab = "Global Active Power (kilowatts)", xlab="", bg="transparent")

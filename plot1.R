@@ -14,6 +14,7 @@ data <- data[data$Date=="2007-02-01" | data$Date=="2007-02-02",]
 
 #draw plot 1
 par(mfcol = c(1, 1))
+par(bg = "transparent")
 data$Global_active_power <- as.numeric(as.character((data$Global_active_power)))
 hist(data$Global_active_power, main = "Global Active Power", xlab = "Global Active Power (kilowatts)", col="red", bg="transparent")
 
